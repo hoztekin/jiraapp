@@ -1,10 +1,19 @@
+import "./App.css";
+import TaskCreate from "./components/TaskCreate";
 
-import './App.css';
+import TaskList from "./components/TaskList";
 
 function App() {
+
+  const createTask = (title, taskdesc) =>{
+    console.log(title, taskdesc);
+};
+
   return (
     <div className="App">
-     halil
+      <TaskCreate onCreate={createTask} />
+      <h1>Tasks</h1>
+      <TaskList />
     </div>
   );
 }
